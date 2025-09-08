@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài liệu - EduCenter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            padding-top: 76px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 80px 0;
+            margin-top: -76px;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #10b981;
+        }
+        
+        .material-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .badge {
+            font-size: 0.8rem;
+        }
+        
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #10b981;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">EduCenter</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teachers.html">Giảng viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schedule.html">Thời khóa biểu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="materials.html">Tài liệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Tài Liệu Học Tập</h1>
+            <p class="lead">Kho tài liệu phong phú với đầy đủ các môn học</p>
+        </div>
+    </div>
+
+    <!-- Materials Section -->
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm tài liệu, giảng viên...">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <select class="form-select">
+                    <option selected>Tất cả môn học</option>
+                    <option>Toán học</option>
+                    <option>Vật lý</option>
+                    <option>Hóa học</option>
+                    <option>Sinh học</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <select class="form-select">
+                    <option selected>Tất cả loại</option>
+                    <option>PDF</option>
+                    <option>Video</option>
+                    <option>PowerPoint</option>
+                    <option>Word</option>
+                </select>
+            </div>
+        </div>
+
+        <h2 class="section-title">Tài liệu mới nhất</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card material-card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-primary">PDF</span>
+                            <small class="text-muted">15/12/2024</small>
+                        </div>
+                        <h5 class="card-title">Giáo trình Toán học cơ bản</h5>
+                        <p class="card-text">Tài liệu chi tiết về toán học cơ bản dành cho sinh viên năm nhất</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-muted">PGS.TS Nguyễn Văn An</span>
+                            <span class="text-muted"><i class="fas fa-download"></i> 312</span>
+                        </div>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="#" class="btn btn-primary"><i class="fas fa-download me-2"></i>Tải xuống</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card material-card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-danger">Video</span>
+                            <small class="text-muted">14/12/2024</small>
+                        </div>
+                        <h5 class="card-title">Bài giảng Vật lý đại cương</h5>
+                        <p class="card-text">Video hướng dẫn các thí nghiệm vật lý đại cương chi tiết</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-muted">TS. Trần Thị Bích</span>
+                            <span class="text-muted"><i class="fas fa-download"></i> 189</span>
+                        </div>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="#" class="btn btn-primary"><i class="fas fa-download me-2"></i>Tải xuống</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card material-card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-success">Word</span>
+                            <small class="text-muted">13/12/2024</small>
+                        </div>
+                        <h5 class="card-title">Tài liệu Hóa học hữu cơ</h5>
+                        <p class="card-text">Tài liệu chi tiết về hóa học hữu cơ với các bài tập ứng dụng</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-muted">ThS. Lê Hoàng Nam</span>
+                            <span class="text-muted"><i class="fas fa-download"></i> 156</span>
+                        </div>
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="#" class="btn btn-primary"><i class="fas fa-download me-2"></i>Tải xuống</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation" class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+                </ul>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">EduCenter</h4>
+                    <p>Trung tâm giáo dục trực tuyến hàng đầu, cung cấp các khóa học chất lượng cao và tài liệu học tập phong phú cho mọi học viên.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Trang chủ</a></li>
+                        <li class="mb-2"><a href="teachers.html" class="text-white text-decoration-none">Giảng viên</a></li>
+                        <li class="mb-2"><a href="schedule.html" class="text-white text-decoration-none">Thời khóa biểu</a></li>
+                        <li class="mb-2"><a href="materials.html" class="text-white text-decoration-none">Tài liệu</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Thông tin liên hệ</h5>
+                    <p><i class="fas fa-phone me-2"></i> 0123 456 789</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@educenter.vn</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Đường ABC, Quận 1, TP.HCM</p>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-4">Đăng ký nhận thông tin</h5>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email của bạn" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 EduCenter. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
