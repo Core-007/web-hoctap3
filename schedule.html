@@ -1,71 +1,354 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lịch học</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer src="assets/js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời khóa biểu - EduCenter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            padding-top: 76px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 80px 0;
+            margin-top: -76px;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #4f46e5;
+        }
+        
+        .schedule-table {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .schedule-table th {
+            background: #4f46e5;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .time-slot {
+            background: #f8fafc;
+            font-weight: bold;
+        }
+        
+        .subject-card {
+            background: #f1f5f9;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #4f46e5;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #4f46e5;
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
-<body data-page="schedule">
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">🎓 GV Nguyễn Văn A</a>
-      <button class="nav-toggle" aria-label="Mở menu"><span></span><span></span><span></span></button>
-      <nav class="site-nav">
-        <a class="nav-link" href="index.html">Trang chủ</a>
-        <a class="nav-link" href="giangvien.html">Giảng viên</a>
-        <a class="nav-link active" href="lichhoc.html">Lịch học</a>
-        <a class="nav-link" href="tailieu.html">Tài liệu</a>
-        <a class="nav-link" href="lienhe.html">Liên hệ</a>
-      </nav>
-    </div>
-  </header>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">EduCenter</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teachers.html">Giảng viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="schedule.html">Thời khóa biểu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="materials.html">Tài liệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <main class="container page">
-    <h1>Lịch học</h1>
-    <div class="table-wrap card">
-      <table class="schedule">
-        <thead>
-          <tr>
-            <th>Môn học</th>
-            <th>Ngày</th>
-            <th>Giờ</th>
-            <th>Ghi chú</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Toán nâng cao</td>
-            <td>Thứ 2, 4, 6</td>
-            <td>18:00 – 19:30</td>
-            <td>Phòng 302</td>
-          </tr>
-          <tr>
-            <td>Luyện thi THPTQG</td>
-            <td>Chủ nhật</td>
-            <td>08:00 – 10:00</td>
-            <td>Ôn đề năm trước</td>
-          </tr>
-          <tr>
-            <td>Toán cơ bản</td>
-            <td>Thứ 3, 5</td>
-            <td>19:00 – 20:30</td>
-            <td>Zoom online</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Thời Khóa Biểu</h1>
+            <p class="lead">Lịch dạy học chi tiết theo từng tuần và lớp học</p>
+        </div>
     </div>
 
-    <!-- Nếu muốn nhúng Google Calendar:
-    <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=Asia%2FHo_Chi_Minh" style="border:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-    -->
-  </main>
+    <!-- Schedule Section -->
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="weekSelect" class="form-label fw-bold">Chọn tuần</label>
+                    <select class="form-select" id="weekSelect">
+                        <option selected>Tuần hiện tại</option>
+                        <option>Tuần 1</option>
+                        <option>Tuần 2</option>
+                        <option>Tuần 3</option>
+                        <option>Tuần 4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="classSelect" class="form-label fw-bold">Chọn lớp</label>
+                    <select class="form-select" id="classSelect">
+                        <option selected>Tất cả lớp</option>
+                        <option>Lớp A</option>
+                        <option>Lớp B</option>
+                        <option>Lớp C</option>
+                    </select>
+                </div>
+            </div>
+        </div>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; 2025 GV Nguyễn Văn A</p>
+        <div class="table-responsive schedule-table">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Tiết học</th>
+                        <th>Thứ 2</th>
+                        <th>Thứ 3</th>
+                        <th>Thứ 4</th>
+                        <th>Thứ 5</th>
+                        <th>Thứ 6</th>
+                        <th>Thứ 7</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time-slot">
+                            <strong>Tiết 1</strong><br>
+                            <small>07:00 - 08:30</small>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Toán học</div>
+                                <small>TS. Nguyễn Văn Nam</small><br>
+                                <small class="text-primary">A101</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Vật lý</div>
+                                <small>PGS. Lê Thị Hoa</small><br>
+                                <small class="text-primary">B205</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Hóa học</div>
+                                <small>ThS. Trần Minh Tuấn</small><br>
+                                <small class="text-primary">C301</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Sinh học</div>
+                                <small>TS. Phạm Thị Lan</small><br>
+                                <small class="text-primary">D102</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Tin học</div>
+                                <small>ThS. Hoàng Văn Đức</small><br>
+                                <small class="text-primary">E205</small>
+                            </div>
+                        </td>
+                        <td class="text-center text-muted">Nghỉ</td>
+                    </tr>
+                    <tr>
+                        <td class="time-slot">
+                            <strong>Tiết 2</strong><br>
+                            <small>08:45 - 10:15</small>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Ngữ văn</div>
+                                <small>ThS. Vũ Thị Mai</small><br>
+                                <small class="text-primary">A102</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Toán học</div>
+                                <small>TS. Nguyễn Văn Nam</small><br>
+                                <small class="text-primary">A101</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Vật lý</div>
+                                <small>PGS. Lê Thị Hoa</small><br>
+                                <small class="text-primary">B205</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Hóa học</div>
+                                <small>ThS. Trần Minh Tuấn</small><br>
+                                <small class="text-primary">C301</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Sinh học</div>
+                                <small>TS. Phạm Thị Lan</small><br>
+                                <small class="text-primary">D102</small>
+                            </div>
+                        </td>
+                        <td class="text-center text-muted">Nghỉ</td>
+                    </tr>
+                    <tr>
+                        <td class="time-slot">
+                            <strong>Tiết 3</strong><br>
+                            <small>10:30 - 12:00</small>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Vật lý</div>
+                                <small>PGS. Lê Thị Hoa</small><br>
+                                <small class="text-primary">B205</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Hóa học</div>
+                                <small>ThS. Trần Minh Tuấn</small><br>
+                                <small class="text-primary">C301</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Toán học</div>
+                                <small>TS. Nguyễn Văn Nam</small><br>
+                                <small class="text-primary">A101</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Tin học</div>
+                                <small>ThS. Hoàng Văn Đức</small><br>
+                                <small class="text-primary">E205</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="subject-card">
+                                <div class="fw-bold">Ngữ văn</div>
+                                <small>ThS. Vũ Thị Mai</small><br>
+                                <small class="text-primary">A102</small>
+                            </div>
+                        </td>
+                        <td class="text-center text-muted">Nghỉ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-  </footer>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">EduCenter</h4>
+                    <p>Trung tâm giáo dục trực tuyến hàng đầu, cung cấp các khóa học chất lượng cao và tài liệu học tập phong phú cho mọi học viên.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Trang chủ</a></li>
+                        <li class="mb-2"><a href="teachers.html" class="text-white text-decoration-none">Giảng viên</a></li>
+                        <li class="mb-2"><a href="schedule.html" class="text-white text-decoration-none">Thời khóa biểu</a></li>
+                        <li class="mb-2"><a href="materials.html" class="text-white text-decoration-none">Tài liệu</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Thông tin liên hệ</h5>
+                    <p><i class="fas fa-phone me-2"></i> 0123 456 789</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@educenter.vn</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Đường ABC, Quận 1, TP.HCM</p>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-4">Đăng ký nhận thông tin</h5>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email của bạn" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 EduCenter. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
