@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Giảng viên</title>
+  <title>Trang chủ - Website Tài liệu học tập</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
   <script defer src="assets/js/script.js"></script>
 </head>
-<body data-page="teacher">
+<body data-page="home">
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">🎓 GV Nguyễn Văn A</a>
       <button class="nav-toggle" aria-label="Mở menu"><span></span><span></span><span></span></button>
       <nav class="site-nav">
-        <a class="nav-link" href="index.html">Trang chủ</a>
-        <a class="nav-link active" href="giangvien.html">Giảng viên</a>
+        <a class="nav-link active" href="index.html">Trang chủ</a>
+        <a class="nav-link" href="giangvien.html">Giảng viên</a>
         <a class="nav-link" href="lichhoc.html">Lịch học</a>
         <a class="nav-link" href="tailieu.html">Tài liệu</a>
         <a class="nav-link" href="lienhe.html">Liên hệ</a>
@@ -22,26 +26,57 @@
     </div>
   </header>
 
-  <main class="container page">
-    <article class="card profile">
-      <div class="avatar" aria-hidden="true">A</div>
-      <div class="profile-body">
-        <h1>Nguyễn Văn A</h1>
-        <p><strong>Chuyên môn:</strong> Toán THPT &amp; Luyện thi ĐHQG</p>
-        <p><strong>Kinh nghiệm:</strong> 10+ năm giảng dạy, 500+ học sinh đạt mục tiêu.</p>
-        <h3>Phương pháp dạy</h3>
-        <ul>
-          <li>Tập trung nền tảng, gỡ “lỗ hổng” theo lộ trình.</li>
-          <li>Bài tập phân tầng: Cơ bản → Khá → Nâng cao → Vận dụng.</li>
-          <li>Định kỳ kiểm tra ngắn, phản hồi cá nhân hóa.</li>
-        </ul>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Nơi chia sẻ <span class="accent">tài liệu & video</span> cho học sinh</h1>
+        <p>Trang web tổng hợp bài giảng, tài liệu tham khảo và lịch học. Cập nhật thường xuyên để đồng hành cùng các em chinh phục mục tiêu.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tailieu.html">Xem tài liệu</a>
+          <a class="btn btn-ghost" href="lichhoc.html">Xem lịch học</a>
+        </div>
       </div>
-    </article>
-  </main>
+      <div class="hero-media" aria-hidden="true">
+        <div class="card stat">
+          <div class="stat-num">120+</div>
+          <div class="stat-label">Tài liệu</div>
+        </div>
+        <div class="card stat">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Video</div>
+        </div>
+        <div class="card stat">
+          <div class="stat-num">98%</div>
+          <div class="stat-label">Hài lòng</div>
+        </div>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,64L80,48C160,32,320,0,480,5.3C640,11,800,53,960,69.3C1120,85,1280,75,1360,69.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"/></svg>
+  </section>
+
+  <section class="features">
+    <div class="container grid-3">
+      <div class="feature card">
+        <h3>Giảng viên</h3>
+        <p>Thông tin, phương pháp giảng dạy, định hướng học tập.</p>
+        <a class="link" href="giangvien.html">Tìm hiểu &rarr;</a>
+      </div>
+      <div class="feature card">
+        <h3>Lịch học</h3>
+        <p>Thời khóa biểu theo tuần, cập nhật lịch thay đổi nhanh chóng.</p>
+        <a class="link" href="lichhoc.html">Xem lịch &rarr;</a>
+      </div>
+      <div class="feature card">
+        <h3>Tài liệu</h3>
+        <p>Video YouTube, PDF/Word/PowerPoint bản rút gọn/preview.</p>
+        <a class="link" href="tailieu.html">Mở tài liệu &rarr;</a>
+      </div>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; 2025 GV Nguyễn Văn A</p>
+      <p>&copy; 2025 GV Nguyễn Văn A • Made with ❤ on GitHub Pages</p>
     </div>
   </footer>
 </body>
