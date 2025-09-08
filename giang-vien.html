@@ -3,36 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giảng Viên</title>
+    <title>Giảng Viên - EduCenter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Thông Tin Giảng Viên</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Trang Chủ</a></li>
-            <li><a href="giang-vien.html">Giảng Viên</a></li>
-            <li><a href="lich-hoc.html">Lịch Học</a></li>
-            <li><a href="tai-lieu.html">Tài Liệu</a></li>
-            <li><a href="lien-he.html">Liên Hệ</a></li>
-            <li><a href="thong-tin.html">Thông Tin</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Copy navbar từ index.html để nhất quán -->
     </nav>
-    
-    <section>
-        <h2>Giảng Viên Chính</h2>
-        <p>Tên: [Tên giảng viên của bạn]</p>
-        <p>Chuyên môn: [Mô tả chuyên môn]</p>
-        <p>Kinh nghiệm: [Số năm kinh nghiệm]</p>
-        <p>Email: [email@domain.com]</p>
-        <!-- Thêm ảnh nếu cần: <img src="assets/giang-vien.jpg" alt="Giảng viên"> -->
+
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h1>Đội Ngũ Giảng Viên</h1>
+            <p>Góp phần hướng dẫn kiến thức và kỹ năng chuyên môn cao.</p>
+        </div>
     </section>
-    
+
+    <section class="container py-5">
+        <div class="row text-center mb-5">
+            <div class="col-md-3">
+                <h2>50+</h2>
+                <p>Giảng Viên</p>
+            </div>
+            <div class="col-md-3">
+                <h2>15+</h2>
+                <p>Năm Trung Bình</p>
+            </div>
+            <div class="col-md-3">
+                <h2>10.000+</h2>
+                <p>Học Viên Tốt Nghiệp</p>
+            </div>
+            <div class="col-md-3">
+                <h2>4.8/5</h2>
+                <p>Đánh Giá Trung Bình</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 lecturer-card">
+                <div class="card">
+                    <img src="assets/images/lecturer1.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Giảng viên" style="width: 150px; height: 150px;">
+                    <div class="card-body">
+                        <h5>PGS.TS. Nguyễn Văn An</h5>
+                        <p>Trưởng khoa Toán học</p>
+                        <p><i class="fas fa-star text-warning"></i> 4.9 (320)</p>
+                        <a href="#" class="btn btn-primary">Xem Hồ Sơ</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Thêm card giảng viên khác từ screenshot -->
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Website Giáo Dục.</p>
+        <!-- Copy footer từ index.html -->
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
