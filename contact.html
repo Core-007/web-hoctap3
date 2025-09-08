@@ -1,55 +1,255 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Liên hệ</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer src="assets/js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - EduCenter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            padding-top: 76px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: white;
+            padding: 80px 0;
+            margin-top: -76px;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: #7c3aed;
+        }
+        
+        .contact-info {
+            padding: 20px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #7c3aed;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #7c3aed;
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
-<body data-page="contact">
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">🎓 GV Nguyễn Văn A</a>
-      <button class="nav-toggle" aria-label="Mở menu"><span></span><span></span><span></span></button>
-      <nav class="site-nav">
-        <a class="nav-link" href="index.html">Trang chủ</a>
-        <a class="nav-link" href="giangvien.html">Giảng viên</a>
-        <a class="nav-link" href="lichhoc.html">Lịch học</a>
-        <a class="nav-link" href="tailieu.html">Tài liệu</a>
-        <a class="nav-link active" href="lienhe.html">Liên hệ</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container page">
-    <h1>Liên hệ</h1>
-    <div class="grid-2 gap">
-      <section class="card">
-        <h3>Thông tin</h3>
-        <ul class="contact-list">
-          <li><strong>Email:</strong> nguyenvana@example.com</li>
-          <li><strong>Điện thoại:</strong> 09xx xxx xxx</li>
-          <li><strong>Facebook:</strong> fb.com/nguyenvana</li>
-          <li><strong>Địa chỉ:</strong> 123 Trần Hưng Đạo, Q.1, TP.HCM</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h3>Gửi lời nhắn nhanh</h3>
-        <!-- Form Google: tạo form, lấy Embed HTML và thay vào dưới đây -->
-        <div class="media">
-          <iframe class="responsive-iframe" src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true" title="Google Form" frameborder="0">Đang tải…</iframe>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">EduCenter</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teachers.html">Giảng viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schedule.html">Thời khóa biểu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="materials.html">Tài liệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <p class="muted">Hoặc gửi email trực tiếp để trao đổi nhanh.</p>
-      </section>
-    </div>
-  </main>
+    </nav>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; 2025 GV Nguyễn Văn A</p>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Liên Hệ</h1>
+            <p class="lead">Chúng tôi luôn sẵn sàng hỗ trợ bạn</p>
+        </div>
     </div>
-  </footer>
+
+    <!-- Contact Section -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="section-title">Gửi tin nhắn cho chúng tôi</h2>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Họ và tên *</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Số điện thoại</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Chủ đề *</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="" selected disabled>Chọn chủ đề</option>
+                                    <option>Hỗ trợ kỹ thuật</option>
+                                    <option>Đăng ký học</option>
+                                    <option>Góp ý</option>
+                                    <option>Khác</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Nội dung tin nhắn *</label>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+                </form>
+            </div>
+            <div class="col-lg-4">
+                <h2 class="section-title">Thông tin liên hệ</h2>
+                <div class="contact-info">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Địa chỉ</h4>
+                    <p>123 Đường ABC, Quận 1, TP.HCM</p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>Điện thoại</h4>
+                    <p>0123 456 789</p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email</h4>
+                    <p>info@educenter.vn</p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Giờ làm việc</h4>
+                    <p>Thứ 2 - Thứ 6: 7:00 - 17:00<br>Thứ 7: 7:00 - 11:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">EduCenter</h4>
+                    <p>Trung tâm giáo dục trực tuyến hàng đầu, cung cấp các khóa học chất lượng cao và tài liệu học tập phong phú cho mọi học viên.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Trang chủ</a></li>
+                        <li class="mb-2"><a href="teachers.html" class="text-white text-decoration-none">Giảng viên</a></li>
+                        <li class="mb-2"><a href="schedule.html" class="text-white text-decoration-none">Thời khóa biểu</a></li>
+                        <li class="mb-2"><a href="materials.html" class="text-white text-decoration-none">Tài liệu</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Thông tin liên hệ</h5>
+                    <p><i class="fas fa-phone me-2"></i> 0123 456 789</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@educenter.vn</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Đường ABC, Quận 1, TP.HCM</p>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-4">Đăng ký nhận thông tin</h5>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email của bạn" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 EduCenter. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
