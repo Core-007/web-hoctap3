@@ -3,116 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ - EduCenter</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Trang Chủ - Website Giáo Dục</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="EduCenter" width="100"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="giang-vien.html">Giảng Viên</a></li>
-                    <li class="nav-item"><a class="nav-link" href="lich-hoc.html">Thời Khóa Biểu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tai-lieu.html">Tài Liệu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên Hệ</a></li>
-                </ul>
-                <form class="d-flex ms-3">
-                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm">
-                    <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
-                </form>
-            </div>
-        </div>
+    <header>
+        <h1>Chào mừng đến với Website Giáo Dục</h1>
+        <p>Dành cho học sinh xem tài liệu, lịch học và thông tin giảng viên.</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="giang-vien.html">Giảng Viên</a></li>
+            <li><a href="lich-hoc.html">Lịch Học</a></li>
+            <li><a href="tai-lieu.html">Tài Liệu</a></li>
+            <li><a href="lien-he.html">Liên Hệ</a></li>
+            <li><a href="thong-tin.html">Thông Tin</a></li>
+        </ul>
     </nav>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Trung Tâm Giáo Dục Trực Tuyến Tuyen</h1>
-            <p>Khám phá khóa học, thư viện phong phú, video bài giảng từ các học khoa.</p>
-            <a href="tai-lieu.html" class="btn btn-light btn-lg">Xêm Thêm</a>
-        </div>
+    
+    <section>
+        <h2>Giới thiệu</h2>
+        <p>Website này cung cấp tài liệu học tập, lịch học và thông tin liên quan. Hãy khám phá các trang khác!</p>
     </section>
-
-    <section class="container py-5">
-        <h2 class="text-center mb-4">Tại Sao Chọn EduCenter?</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-3 stats-card">
-                <i class="fas fa-book fa-3x mb-3 text-primary"></i>
-                <h4>Bài Giảng</h4>
-                <p>Các bài giảng chất lượng cao từ chuyên gia.</p>
-            </div>
-            <div class="col-md-3 stats-card">
-                <i class="fas fa-video fa-3x mb-3 text-primary"></i>
-                <h4>Video YouTube</h4>
-                <p>Các video bài giảng thú vị và dễ hiểu.</p>
-            </div>
-            <div class="col-md-3 stats-card">
-                <i class="fas fa-comments fa-3x mb-3 text-primary"></i>
-                <h4>Thảo Luận Bài</h4>
-                <p>Lớp học trực tuyến với thảo luận sôi nổi.</p>
-            </div>
-            <div class="col-md-3 stats-card">
-                <i class="fas fa-user-tie fa-3x mb-3 text-primary"></i>
-                <h4>Giảng Viên Uy Tín</h4>
-                <p>Đội ngũ giảng viên giàu kinh nghiệm.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container py-5 bg-light">
-        <h2 class="text-center mb-4">Tài Liệu Mới Nhất</h2>
-        <div class="row">
-            <!-- Ví dụ thẻ tài liệu -->
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5>Giao Trinh Toán</h5>
-                        <p>16/10/2024 - Hoc cơ bản</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Thêm thêm -->
-        </div>
-        <div class="text-center mt-4">
-            <a href="tai-lieu.html" class="btn btn-primary">Xêm Cả</a>
-        </div>
-    </section>
-
+    
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>EduCenter</h5>
-                    <p>Trung tâm giáo dục trực tuyến hàng đầu.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Liên Kết Nhanh</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html">Trang Chủ</a></li>
-                        <li><a href="giang-vien.html">Giảng Viên</a></li>
-                        <li><a href="lich-hoc.html">Thời Khóa Biểu</a></li>
-                        <li><a href="tai-lieu.html">Tài Liệu</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Liên Hệ</h5>
-                    <p><i class="fas fa-phone"></i> 0123 456 789</p>
-                    <p><i class="fas fa-envelope"></i> info@educenter.vn</p>
-                    <p><i class="fab fa-facebook"></i> <i class="fab fa-twitter"></i></p>
-                </div>
-            </div>
-            <p class="text-center mt-4">&copy; 2025 EduCenter. All rights reserved.</p>
-        </div>
+        <p>&copy; 2025 Website Giáo Dục. All rights reserved.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js"></script>
 </body>
 </html>
