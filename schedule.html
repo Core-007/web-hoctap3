@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời khóa biểu - EduCenter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">EduCenter</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teachers.html">Giảng viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="schedule.html">Thời khóa biểu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="materials.html">Tài liệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h2 class="section-title">Thời Khóa Biểu</h2>
+        <p class="text-center mb-5">Lịch dạy học chi tiết theo từng tuần và lớp học</p>
+        
+        <div class="row mb-4">
+            <div class="col-md-6 mb-3">
+                <label for="weekSelect" class="form-label fw-bold">Chọn tuần</label>
+                <select class="form-select" id="weekSelect">
+                    <option selected>Tuần hiện tại</option>
+                    <option>Tuần 1 (01/01 - 07/01)</option>
+                    <option>Tuần 2 (08/01 - 14/01)</option>
+                    <option>Tuần 3 (15/01 - 21/01)</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="classSelect" class="form-label fw-bold">Chọn lớp</label>
+                <select class="form-select" id="classSelect">
+                    <option selected>Tất cả lớp</option>
+                    <option>Lớp 10A1</option>
+                    <option>Lớp 10A2</option>
+                    <option>Lớp 11A1</option>
+                    <option>Lớp 11A2</option>
+                    <option>Lớp 12A1</option>
+                    <option>Lớp 12A2</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="table-responsive mb-5">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Tiết học</th>
+                        <th>Thứ 2</th>
+                        <th>Thứ 3</th>
+                        <th>Thứ 4</th>
+                        <th>Thứ 5</th>
+                        <th>Thứ 6</th>
+                        <th>Thứ 7</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiết 1<br>07:00 - 08:30</td>
+                        <td>Toán học<br>TS. Nguyễn Văn Nam<br>A101</td>
+                        <td>Vật lý<br>PGS. Lê Thị Hoa<br>B205</td>
+                        <td>Hóa học<br>ThS. Trần Minh Tuấn<br>C301</td>
+                        <td>Sinh học<br>TS. Phạm Thị Lan<br>D102</td>
+                        <td>Tin học<br>ThS. Hoàng Văn Đức<br>E205</td>
+                        <td>Nghỉ</td>
+                    </tr>
+                    <tr>
+                        <td>Tiết 2<br>08:45 - 10:15</td>
+                        <td>Ngữ văn<br>ThS. Vũ Thị Mai<br>A102</td>
+                        <td>Toán học<br>TS. Nguyễn Văn Nam<br>A101</td>
+                        <td>Vật lý<br>PGS. Lê Thị Hoa<br>B205</td>
+                        <td>Hóa học<br>ThS. Trần Minh Tuấn<br>C301</td>
+                        <td>Sinh học<br>TS. Phạm Thị Lan<br>D102</td>
+                        <td>Nghỉ</td>
+                    </tr>
+                    <tr>
+                        <td>Tiết 3<br>10:30 - 12:00</td>
+                        <td>Vật lý<br>PGS. Lê Thị Hoa<br>B205</td>
+                        <td>Hóa học<br>ThS. Trần Minh Tuấn<br>C301</td>
+                        <td>Toán học<br>TS. Nguyễn Văn Nam<br>A101</td>
+                        <td>Tin học<br>ThS. Hoàng Văn Đức<br>E205</td>
+                        <td>Ngữ văn<br>ThS. Vũ Thị Mai<br>A102</td>
+                        <td>Nghỉ</td>
+                    </tr>
+                    <tr>
+                        <td>Tiết 4<br>13:30 - 15:00</td>
+                        <td>Âm nhạc<br>Cô Nguyễn Thị Linh<br>F101</td>
+                        <td>Mỹ thuật<br>Thầy Lê Văn Quang<br>F201</td>
+                        <td>Lịch sử<br>ThS. Nguyễn Thị Hương<br>A201</td>
+                        <td>Địa lý<br>TS. Trần Văn Minh<br>A202</td>
+                        <td>Thể dục<br>ThS. Đỗ Văn Thành<br>Sân vận động</td>
+                        <td>Nghỉ</td>
+                    </tr>
+                    <tr>
+                        <td>Tiết 5<br>15:15 - 16:45</td>
+                        <td>Sinh học<br>TS. Phạm Thị Lan<br>D102</td>
+                        <td>Tin học<br>ThS. Hoàng Văn Đức<br>E205</td>
+                        <td>Lịch sử<br>ThS. Nguyễn Thị Hương<br>A201</td>
+                        <td>Địa lý<br>TS. Trần Văn Minh<br>A202</td>
+                        <td>Hóa học<br>ThS. Trần Minh Tuấn<br>C301</td>
+                        <td>Nghỉ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Thông báo</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Lịch thi giữa kỳ: 15/03 - 20/03</li>
+                            <li class="list-group-item">Nghỉ lễ 30/04 - 01/05</li>
+                            <li class="list-group-item">Họp phụ huynh: 25/03</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">Hỗ trợ</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><i class="fas fa-phone me-2"></i> Văn phòng: (024) 3555 0123</p>
+                        <p><i class="fas fa-envelope me-2"></i> Email: info@truongthpt.edu.vn</p>
+                        <p><i class="fas fa-clock me-2"></i> Thứ 2-6: 7:00 - 17:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">EduCenter</h4>
+                    <p>Trung tâm giáo dục trực tuyến hàng đầu, cung cấp các khóa học chất lượng cao và tài liệu học tập phong phú cho mọi học viên.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Trang chủ</a></li>
+                        <li class="mb-2"><a href="teachers.html" class="text-white text-decoration-none">Giảng viên</a></li>
+                        <li class="mb-2"><a href="schedule.html" class="text-white text-decoration-none">Thời khóa biểu</a></li>
+                        <li class="mb-2"><a href="materials.html" class="text-white text-decoration-none">Tài liệu</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Thông tin liên hệ</h5>
+                    <p><i class="fas fa-phone me-2"></i> 0123 456 789</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@educenter.vn</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Đường ABC, Quận 1, TP.HCM</p>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-4">Đăng ký nhận thông tin</h5>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email của bạn" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 EduCenter. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
